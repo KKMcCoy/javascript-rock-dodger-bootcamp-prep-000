@@ -92,38 +92,38 @@ function endGame() {
 }
 
 
-function moveDodger(e) {
+// function moveDodger(e) {
   
-  function moveDodgerLeft() {
-    var left = positionToInteger(DODGER.style.left);
-    if (left > 0) {
-    DODGER.style.left = `${left - 4}px`;
-    window.requestAnimationFrame(moveDodgerLeft);
-    }
-  }
+//   function moveDodgerLeft() {
+//     var left = positionToInteger(DODGER.style.left);
+//     if (left > 0) {
+//     DODGER.style.left = `${left - 4}px`;
+//     window.requestAnimationFrame(moveDodgerLeft);
+//     }
+//   }
   
-  function moveDodgerRight() {
-    var left = positionToInteger(DODGER.style.left);
-    if (left < GAME_WIDTH - 40) {
-    DODGER.style.left = `${left + 4}px`; 
-    window.requestAnimationFrame(moveDodgerRight); 
-    }
-  }
+//   function moveDodgerRight() {
+//     var left = positionToInteger(DODGER.style.left);
+//     if (left < GAME_WIDTH - 40) {
+//     DODGER.style.left = `${left + 4}px`; 
+//     window.requestAnimationFrame(moveDodgerRight); 
+//     }
+//   }
   
 
-  if (e.which === LEFT_ARROW) {
-    e.preventDefault();
-    e.stopPropagation();
-    moveDodgerLeft();
-  } else if (e.which === RIGHT_ARROW) {
-    e.preventDefault();
-    e.stopPropagation();
-    moveDodgerRight();
-  } else if (e.which !== LEFT_ARROW && e.which !== RIGHT_ARROW) {
-    e.preventDefault();
-    e.stopPropagation();
-  }
-}
+//   if (e.which === LEFT_ARROW) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     moveDodgerLeft();
+//   } else if (e.which === RIGHT_ARROW) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     moveDodgerRight();
+//   } else if (e.which !== LEFT_ARROW && e.which !== RIGHT_ARROW) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//   }
+// }
 
 
 /**
