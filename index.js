@@ -62,25 +62,16 @@ function createRock(x) {
     return endGame();
     } 
   
-    // if (top < 360) {
-  
-    //   window.requestAnimationFrame(moveRock);
-    // }
-  
- 
-  
-  if ( top < 400) {
+    if ( top < 400) {
     window.requestAnimationFrame(moveRock);
-  } else {
+    } else {
     rock.remove();
-  }
-  }
+    }
+    }
   
   window.requestAnimationFrame(moveRock);
-        
-
- ROCKS.push(rock);
- return rock;
+  ROCKS.push(rock);
+  return rock;
 }
 
 
