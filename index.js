@@ -125,17 +125,6 @@ function moveDodger(e) {
   }
 }
 
-// implement me!
-  /**
-   * This function should move DODGER to the left
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
-   
-   // implement me!
-  /**
-   * This function should move DODGER to the right
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
 
 /**
  * @param {string} p The position property
