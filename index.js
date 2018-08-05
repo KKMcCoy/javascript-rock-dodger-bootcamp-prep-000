@@ -91,6 +91,44 @@ function endGame() {
 
 }
 
+function moveDodger(e) {
+  if([LEFT_ARROW, RIGHT_ARROW].indexOf(e.which) > -1){
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  if (e.which === LEFT_ARROW){
+    moveDodgerLeft()
+  }if (e.which === RIGHT_ARROW){
+    moveDodgerRight()
+  }{
+
+  }// implement me!
+  /**
+   * This function should call `moveDodgerLeft()`
+   * if the left arrow is pressed and `moveDodgerRight()`
+   * if the right arrow is pressed. (Check the constants
+   * we've declared for you above.)
+   * And be sure to use the functions declared below!
+   */
+}
+
+function moveDodgerLeft() {
+  window.requestAnimationFrame(function() {
+    const left = positionToInteger(DODGER.style.left)
+    if (left>0) {
+      DODGER.style.left = `${left - 6}px`
+    }
+  });
+}
+
+function moveDodgerRight() {
+   window.requestAnimationFrame(function() {
+     const left = positionToInteger(DODGER.style.left)
+     if (left<360) {
+       DODGER.style.left = `${left + 6}px`
+     }
+   });
+   }
 
 // function moveDodger(e) {
   
