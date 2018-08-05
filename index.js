@@ -95,25 +95,22 @@ function endGame() {
 function moveDodger(e) {
   
   function moveDodgerLeft() {
-  window.requestAnimationFrame(function() {
-    const left = positionToInteger(DODGER.style.left);
+    var left = positionToInteger(DODGER.style.left);
     if (left > 0) {
     DODGER.style.left = `${left - 4}px`;
-    } 
-  });
-  
+    window.requestAnimationFrame(moveDodgerLeft) ;
+    }
   }
   
   function moveDodgerRight() {
-    window.requestAnimationFrame(function() {
-    const left = positionToInteger(DODGER.style.left);
+    var left = positionToInteger(DODGER.style.left);
     if (left < 360) {
     DODGER.style.left = `${left + 4}px`; 
+    window.requestAnimationFrame(moveDodgerRight); 
     }
-  });
-  
   }
   
+
   if (e.which === LEFT_ARROW) {
     e.preventDefault();
     e.stopPropagation();
@@ -121,8 +118,8 @@ function moveDodger(e) {
   } else if (e.which === RIGHT_ARROW) {
     e.preventDefault();
     e.stopPropagation();
-    moveDodgerRight();
-  } else {
+    window.requestAnimationFrame(moveDodgerRight);
+  } else if (e.which !== LEFT_ARROW && e.which !== RIGHT-ARROW) {
     e.preventDefault();
     e.stopPropagation();
   }
