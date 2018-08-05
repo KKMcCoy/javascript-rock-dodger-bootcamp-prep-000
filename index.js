@@ -84,10 +84,9 @@ function endGame() {
   
   window.removeEventListener('keydown', moveDodger);
   
-  alert('YOU LOSE!');
-  
   START.innerHTML = 'Play again?';
   
+  return alert('YOU LOSE!');
 
 }
 
