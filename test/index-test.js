@@ -184,8 +184,8 @@ describe('Rock Dodger', () => {
 
         moveDodger(e)
 
-        // expect(e.preventDefault).toNotHaveBeenCalled()
-        // expect(e.stopPropagation).toNotHaveBeenCalled()
+        expect(e.preventDefault).toNotHaveBeenCalled()
+        expect(e.stopPropagation).toNotHaveBeenCalled()
         expect(l).toNotHaveBeenCalled()
         expect(r).toNotHaveBeenCalled()
 
