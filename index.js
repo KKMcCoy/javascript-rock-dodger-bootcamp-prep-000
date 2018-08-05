@@ -22,12 +22,10 @@ function checkCollision(rock) {
    
   const dodgerLeftEdge = positionToInteger(DODGER.style.left);
 
-                      // FIXME: The DODGER is 40 pixels wide -- how do we get the right edge?
   const dodgerRightEdge = positionToInteger(DODGER.style.left) + 40;
 
   const rockLeftEdge = positionToInteger(rock.style.left);
 
-                      // FIXME: The rock is 20 pixel's wide -- how do we get the right edge?
   const rockRightEdge = positionToInteger(rock.style.left) + 20;
 
   
@@ -107,54 +105,21 @@ function moveDodger(e) {
 
 function moveDodgerLeft() {
   window.requestAnimationFrame(function() {
-    const left = positionToInteger(DODGER.style.left)
+    const left = positionToInteger(DODGER.style.left);
     if (left>0) {
-      DODGER.style.left = `${left - 4}px`
+      DODGER.style.left = `${left - 4}px`;
     }
   });
 }
 
 function moveDodgerRight() {
    window.requestAnimationFrame(function() {
-     const left = positionToInteger(DODGER.style.left)
+     const left = positionToInteger(DODGER.style.left);
      if (left<360) {
-       DODGER.style.left = `${left + 4}px`
+       DODGER.style.left = `${left + 4}px`;
      }
    });
    }
-
-// function moveDodger(e) {
-  
-//   function moveDodgerLeft() {
-//     var left = positionToInteger(DODGER.style.left);
-//     if (left > 0) {
-//     DODGER.style.left = `${left - 4}px`;
-//     window.requestAnimationFrame(moveDodgerLeft);
-//     }
-//   }
-  
-//   function moveDodgerRight() {
-//     var left = positionToInteger(DODGER.style.left);
-//     if (left < GAME_WIDTH - 40) {
-//     DODGER.style.left = `${left + 4}px`; 
-//     window.requestAnimationFrame(moveDodgerRight); 
-//     }
-//   }
-  
-
-//   if (e.which === LEFT_ARROW) {
-//     e.preventDefault();
-//     e.stopPropagation();
-//     moveDodgerLeft();
-//   } else if (e.which === RIGHT_ARROW) {
-//     e.preventDefault();
-//     e.stopPropagation();
-//     moveDodgerRight();
-//   } else if (e.which !== LEFT_ARROW && e.which !== RIGHT_ARROW) {
-//     e.preventDefault();
-//     e.stopPropagation();
-//   }
-// }
 
 
 /**
