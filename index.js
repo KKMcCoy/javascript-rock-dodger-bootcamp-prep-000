@@ -97,9 +97,9 @@ function moveDodger(e) {
     e.stopPropagation();
   }
   if (e.which === LEFT_ARROW){
-    moveDodgerLeft()
+    moveDodgerLeft();
   }if (e.which === RIGHT_ARROW){
-    moveDodgerRight()
+    moveDodgerRight();
   }
 }
 
