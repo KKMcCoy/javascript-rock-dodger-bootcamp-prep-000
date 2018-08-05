@@ -101,6 +101,7 @@ function moveDodger(e) {
   }if (e.which === RIGHT_ARROW){
     moveDodgerRight()
   }
+}
 
 function moveDodgerLeft() {
   window.requestAnimationFrame(function() {
