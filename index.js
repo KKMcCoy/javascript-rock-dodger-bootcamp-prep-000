@@ -12,9 +12,7 @@ const START = document.getElementById('start')
 
 var gameInterval = null
 
-//////////////////////////////////
-
-
+//**//
 
 function checkCollision(rock) {
 
@@ -35,12 +33,9 @@ function checkCollision(rock) {
   
   if (rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge){
     return true;
-  } 
-  
-  if (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge){
+  } else if (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge){
     return true;
-  
-  if (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge){ 
+  } else if (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge){ 
     return true;
 }
 }return;
