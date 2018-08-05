@@ -98,7 +98,7 @@ function moveDodger(e) {
     var left = positionToInteger(DODGER.style.left);
     if (left > 0) {
     DODGER.style.left = `${left - 4}px`;
-    window.requestAnimationFrame(moveDodgerLeft) ;
+    window.requestAnimationFrame(moveDodgerLeft);
     }
   }
   
@@ -114,7 +114,7 @@ function moveDodger(e) {
   if (e.which === LEFT_ARROW) {
     e.preventDefault();
     e.stopPropagation();
-    moveDodgerLeft();
+    window.requestAnimationFrame(moveDodgerLeft);
   } else if (e.which === RIGHT_ARROW) {
     e.preventDefault();
     e.stopPropagation();
