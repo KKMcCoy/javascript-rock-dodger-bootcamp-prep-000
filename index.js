@@ -88,7 +88,7 @@ function endGame() {
   
   START.innerHTML = 'Play again?';
   
-  return;
+
 }
 
 
