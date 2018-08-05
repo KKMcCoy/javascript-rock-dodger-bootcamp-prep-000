@@ -119,7 +119,7 @@ function moveDodger(e) {
     e.preventDefault();
     e.stopPropagation();
     window.requestAnimationFrame(moveDodgerRight);
-  } else if (e.which !== LEFT_ARROW && e.which !== RIGHT-ARROW) {
+  } else if (e.which !== LEFT_ARROW && e.which !== RIGHT_ARROW) {
     e.preventDefault();
     e.stopPropagation();
   }
